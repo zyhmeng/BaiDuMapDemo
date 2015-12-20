@@ -8,11 +8,10 @@
 
 #import "BaiduMapViewController.h"
 #import "CustomAnnotionView.h"
-
+#import "PaopaoViewClicked.h"
 
 @interface BaiduMapViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>
 @property (strong, nonatomic) IBOutlet BMKMapView *mapView;
-@property (strong, nonatomic) IBOutlet UIView *paopaoView;
 @property (nonatomic, strong) BMKLocationService *locService;
 @property (nonatomic, strong) BMKUserLocation *userLocation;
 @end
@@ -78,12 +77,6 @@
     return nil;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
-
 - (void)viewDidAppear:(BOOL)animated
 {
     //设置标注点
@@ -93,9 +86,8 @@
     coordinate.longitude = 113.726;
     pointAnnotation.coordinate = coordinate;
     pointAnnotation.title = @"云峰";
-    pointAnnotation.subtitle = @"峰会天下";
+    pointAnnotation.subtitle = @"绿地峰会天下";
     
-
     [_mapView addAnnotation:pointAnnotation];
 }
 -(void)viewWillAppear:(BOOL)animated
@@ -108,11 +100,14 @@
     [_mapView viewWillDisappear];
     _mapView.delegate = nil; // 不用时，置nil
 }
+
+#pragma mark - 百度地图位置更新
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
 {
     _userLocation = userLocation;
     [_mapView updateLocationData:userLocation];
 }
+#pragma mark - 我的位置点击事件
 - (IBAction)myLocation:(id)sender {
     //当前位置显示在可视范围内
     BMKCoordinateRegion region;
@@ -123,8 +118,17 @@
     _mapView.region = region;
 
 }
+
+#pragma mark - 点击paopaoView响应事件
 - (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view
 {
+    PaopaoViewClicked *paopaoVC = [[PaopaoViewClicked alloc]init];
+    paopaoVC.locationLatitude = self.userLocation.location.coordinate.latitude;
+    paopaoVC.locationLongitude = self.userLocation.location.coordinate.longitude;
+    paopaoVC.locationIcon = [UIImage imageNamed:@"man"];
+    paopaoVC.locationTitle = @"云峰";
+    paopaoVC.locationSubtitle = @"绿地峰会天下";
+    [self.navigationController pushViewController:paopaoVC animated:YES];
     
 }
 

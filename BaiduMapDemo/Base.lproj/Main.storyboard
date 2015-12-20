@@ -20,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppZ-xY-ike">
                                 <rect key="frame" x="250" y="229" width="60" height="30"/>
                                 <state key="normal" title="百度地图"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="170" y="251" width="60" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="BaiduMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fx8-Kc-2ok"/>
                                 </connections>
@@ -31,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="251"/>
+            <point key="canvasLocation" x="1720.5" y="180.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6a5-xO-0KJ">

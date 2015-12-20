@@ -8,7 +8,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiduMapViewController">
             <connections>
                 <outlet property="mapView" destination="ezE-Gh-Vnr" id="Ng3-H2-fLn"/>
-                <outlet property="paopaoView" destination="AbS-7s-Gmd" id="jph-so-dpY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -139,49 +138,5 @@
                 </mask>
             </variation>
         </view>
-        <view alpha="0.29999999999999999" contentMode="scaleToFill" restorationIdentifier="paopaoView" id="AbS-7s-Gmd">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paopao" translatesAutoresizingMaskIntoConstraints="NO" id="415-mP-WhY">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                </imageView>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="415-mP-WhY" firstAttribute="top" secondItem="AbS-7s-Gmd" secondAttribute="top" id="1ai-1m-fEb"/>
-                <constraint firstAttribute="trailing" secondItem="415-mP-WhY" secondAttribute="trailing" id="J3H-Ax-022"/>
-                <constraint firstItem="415-mP-WhY" firstAttribute="leading" secondItem="AbS-7s-Gmd" secondAttribute="leading" id="Pga-pq-1YX"/>
-                <constraint firstAttribute="bottom" secondItem="415-mP-WhY" secondAttribute="bottom" id="XRR-ot-STR"/>
-            </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="415-mP-WhY"/>
-                </mask>
-                <mask key="constraints">
-                    <exclude reference="1ai-1m-fEb"/>
-                    <exclude reference="J3H-Ax-022"/>
-                    <exclude reference="Pga-pq-1YX"/>
-                    <exclude reference="XRR-ot-STR"/>
-                </mask>
-            </variation>
-            <variation key="heightClass=regular-widthClass=compact">
-                <mask key="subviews">
-                    <include reference="415-mP-WhY"/>
-                </mask>
-                <mask key="constraints">
-                    <include reference="1ai-1m-fEb"/>
-                    <include reference="J3H-Ax-022"/>
-                    <include reference="Pga-pq-1YX"/>
-                    <include reference="XRR-ot-STR"/>
-                </mask>
-            </variation>
-            <point key="canvasLocation" x="-101" y="651"/>
-        </view>
     </objects>
-    <resources>
-        <image name="paopao" width="217" height="49"/>
-    </resources>
 </document>

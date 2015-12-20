@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//百度地图的密钥
 #define BaiduMapKey   @"i2RfVkOuRHrp2iGrUDi5mrFf"
 
 @interface BaiduMapViewController : UIViewController
