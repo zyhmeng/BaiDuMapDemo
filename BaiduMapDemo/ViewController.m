@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BaiduMapViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)BaiduMap:(id)sender {
+    BaiduMapViewController *mapViewVC = [[BaiduMapViewController alloc]init];
+    
+    [self.navigationController pushViewController:mapViewVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
