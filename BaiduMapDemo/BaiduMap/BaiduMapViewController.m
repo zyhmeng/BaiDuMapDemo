@@ -7,10 +7,13 @@
 //
 
 #import "BaiduMapViewController.h"
-
+#import "CustomPointAnnotation.h"
 #import "PaopaoViewClicked.h"
+#import "CustomPintAnnotationView.h"
 
 @interface BaiduMapViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>
+
+@property (strong, nonatomic) IBOutlet UIView *customPaopaoView;
 @property (strong, nonatomic) IBOutlet BMKMapView *mapView;
 @property (nonatomic, strong) BMKLocationService *locService;
 @property (nonatomic, strong) BMKUserLocation *userLocation;
@@ -56,10 +59,11 @@
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
-        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
-
+        static NSString *myAnnotation = @"myAnnotation";
+        
+        BMKPinAnnotationView *newAnnotationView = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:myAnnotation];
         if (newAnnotationView == nil) {
-            newAnnotationView = [[BMKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
+            newAnnotationView = [[BMKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:myAnnotation];
         }
         UIView *paopaoLeftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 32, 41)];
         UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"man"]];
@@ -73,7 +77,20 @@
         newAnnotationView.rightCalloutAccessoryView = paopaoRightView; 
         
         return newAnnotationView;
+    }else if ([annotation isKindOfClass:[CustomPointAnnotation class]])
+    {
+        CustomPintAnnotationView *customPintView = [CustomPintAnnotationView annotationViewWithMap:mapView];
+        customPintView.annotation = annotation;
+                
+        self.customPaopaoView.frame = CGRectMake(0, 0, 185, 70);
+        self.customPaopaoView.layer.cornerRadius = 30;
+        BMKActionPaopaoView *paopaoView = [[BMKActionPaopaoView alloc]initWithCustomView:self.customPaopaoView];
+        ((CustomPintAnnotationView *)customPintView).paopaoView = nil;
+        ((CustomPintAnnotationView *)customPintView).paopaoView = paopaoView;
+        return customPintView;
     }
+    
+    
     return nil;
 }
 
@@ -87,8 +104,17 @@
     pointAnnotation.coordinate = coordinate;
     pointAnnotation.title = @"云峰";
     pointAnnotation.subtitle = @"绿地峰会天下";
-    
     [_mapView addAnnotation:pointAnnotation];
+    
+    CustomPointAnnotation *customPoint = [[CustomPointAnnotation alloc]init];
+    CLLocationCoordinate2D customCoordinate;
+    customCoordinate.latitude = 34.602;
+    customCoordinate.longitude = 113.725;
+    customPoint.coordinate = customCoordinate;
+    customPoint.icon = @"start";
+    [_mapView addAnnotation:customPoint];
+    
+    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -122,6 +148,7 @@
 #pragma mark - 点击paopaoView响应事件
 - (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view
 {
+    
     PaopaoViewClicked *paopaoVC = [[PaopaoViewClicked alloc]init];
     paopaoVC.locationLatitude = self.userLocation.location.coordinate.latitude;
     paopaoVC.locationLongitude = self.userLocation.location.coordinate.longitude;
@@ -131,5 +158,7 @@
     [self.navigationController pushViewController:paopaoVC animated:YES];
     
 }
+
+
 
 @end
