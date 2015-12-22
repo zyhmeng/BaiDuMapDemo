@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiduMapViewController">
             <connections>
-                <outlet property="customPaopaoView" destination="tyI-tA-3Rv" id="uOb-Q6-Dxz"/>
                 <outlet property="mapView" destination="ezE-Gh-Vnr" id="Ng3-H2-fLn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -139,108 +138,5 @@
                 </mask>
             </variation>
         </view>
-        <view alpha="0.90000000000000002" contentMode="scaleToFill" id="tyI-tA-3Rv">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="e1o-9p-Tea">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="oZZ-dP-q2J"/>
-                        <constraint firstAttribute="width" constant="30" id="ved-zF-Evt"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="oZZ-dP-q2J"/>
-                            <exclude reference="ved-zF-Evt"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="oZZ-dP-q2J"/>
-                            <include reference="ved-zF-Evt"/>
-                        </mask>
-                    </variation>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定义" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSy-Xv-wgS">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CustomPaopao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYm-s3-UsM">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="ezp-h8-vxm"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="ezp-h8-vxm"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="ezp-h8-vxm"/>
-                        </mask>
-                    </variation>
-                </label>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="tYm-s3-UsM" secondAttribute="trailing" id="4rP-sg-pAz"/>
-                <constraint firstItem="e1o-9p-Tea" firstAttribute="top" secondItem="tyI-tA-3Rv" secondAttribute="top" constant="20" id="5ME-Rl-roR"/>
-                <constraint firstAttribute="trailing" secondItem="iSy-Xv-wgS" secondAttribute="trailing" id="Glc-vt-U7e"/>
-                <constraint firstItem="iSy-Xv-wgS" firstAttribute="leading" secondItem="e1o-9p-Tea" secondAttribute="trailing" constant="20" id="HoM-Pk-ZOY"/>
-                <constraint firstItem="tYm-s3-UsM" firstAttribute="leading" secondItem="e1o-9p-Tea" secondAttribute="trailing" constant="20" id="L4K-R2-kGv"/>
-                <constraint firstItem="e1o-9p-Tea" firstAttribute="leading" secondItem="tyI-tA-3Rv" secondAttribute="leading" constant="20" id="Wi3-GS-eTM">
-                    <variation key="heightClass=regular-widthClass=compact" constant="15"/>
-                </constraint>
-                <constraint firstItem="tYm-s3-UsM" firstAttribute="top" secondItem="iSy-Xv-wgS" secondAttribute="bottom" constant="10" id="bOi-eY-Ebe"/>
-                <constraint firstItem="iSy-Xv-wgS" firstAttribute="top" secondItem="tyI-tA-3Rv" secondAttribute="top" constant="10" id="naD-Wp-HR7"/>
-            </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="e1o-9p-Tea"/>
-                    <exclude reference="iSy-Xv-wgS"/>
-                    <exclude reference="tYm-s3-UsM"/>
-                </mask>
-                <mask key="constraints">
-                    <exclude reference="5ME-Rl-roR"/>
-                    <exclude reference="Wi3-GS-eTM"/>
-                    <exclude reference="Glc-vt-U7e"/>
-                    <exclude reference="HoM-Pk-ZOY"/>
-                    <exclude reference="naD-Wp-HR7"/>
-                    <exclude reference="4rP-sg-pAz"/>
-                    <exclude reference="L4K-R2-kGv"/>
-                    <exclude reference="bOi-eY-Ebe"/>
-                </mask>
-            </variation>
-            <variation key="heightClass=regular-widthClass=compact">
-                <mask key="subviews">
-                    <include reference="e1o-9p-Tea"/>
-                    <include reference="iSy-Xv-wgS"/>
-                    <include reference="tYm-s3-UsM"/>
-                </mask>
-                <mask key="constraints">
-                    <include reference="5ME-Rl-roR"/>
-                    <include reference="Wi3-GS-eTM"/>
-                    <include reference="Glc-vt-U7e"/>
-                    <include reference="HoM-Pk-ZOY"/>
-                    <include reference="naD-Wp-HR7"/>
-                    <include reference="4rP-sg-pAz"/>
-                    <include reference="L4K-R2-kGv"/>
-                    <include reference="bOi-eY-Ebe"/>
-                </mask>
-            </variation>
-            <point key="canvasLocation" x="-133.5" y="464.5"/>
-        </view>
     </objects>
-    <resources>
-        <image name="man" width="32" height="32"/>
-    </resources>
 </document>

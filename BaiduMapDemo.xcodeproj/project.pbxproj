@@ -12,6 +12,8 @@
 		068975571C2673A500D31344 /* BaiduMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 068975561C2673A500D31344 /* BaiduMapModel.m */; };
 		0689755B1C2675C000D31344 /* PaopaoViewClicked.m in Sources */ = {isa = PBXBuildFile; fileRef = 068975591C2675C000D31344 /* PaopaoViewClicked.m */; };
 		0689755C1C2675C000D31344 /* PaopaoViewClicked.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0689755A1C2675C000D31344 /* PaopaoViewClicked.xib */; };
+		06A6099C1C28E62000DB19E3 /* CustomPaopaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A6099B1C28E62000DB19E3 /* CustomPaopaoView.m */; };
+		06A6099E1C28E65700DB19E3 /* CustomPaopaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A6099D1C28E65700DB19E3 /* CustomPaopaoView.xib */; };
 		06F4CDA91C250463008CAFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDA81C250463008CAFE4 /* main.m */; };
 		06F4CDAC1C250463008CAFE4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDAB1C250463008CAFE4 /* AppDelegate.mm */; };
 		06F4CDAF1C250463008CAFE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDAE1C250463008CAFE4 /* ViewController.m */; };
@@ -68,6 +70,9 @@
 		068975581C2675C000D31344 /* PaopaoViewClicked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaopaoViewClicked.h; sourceTree = "<group>"; };
 		068975591C2675C000D31344 /* PaopaoViewClicked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaopaoViewClicked.m; sourceTree = "<group>"; };
 		0689755A1C2675C000D31344 /* PaopaoViewClicked.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaopaoViewClicked.xib; sourceTree = "<group>"; };
+		06A6099A1C28E62000DB19E3 /* CustomPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPaopaoView.h; sourceTree = "<group>"; };
+		06A6099B1C28E62000DB19E3 /* CustomPaopaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPaopaoView.m; sourceTree = "<group>"; };
+		06A6099D1C28E65700DB19E3 /* CustomPaopaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPaopaoView.xib; sourceTree = "<group>"; };
 		06F4CDA41C250463008CAFE4 /* BaiduMapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduMapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4CDA81C250463008CAFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F4CDAA1C250463008CAFE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,6 +227,9 @@
 				06F4CDF71C250C92008CAFE4 /* BaiduMapViewController.h */,
 				06F4CDF81C250C92008CAFE4 /* BaiduMapViewController.m */,
 				06F4CDF91C250C92008CAFE4 /* BaiduMapViewController.xib */,
+				06A6099A1C28E62000DB19E3 /* CustomPaopaoView.h */,
+				06A6099B1C28E62000DB19E3 /* CustomPaopaoView.m */,
+				06A6099D1C28E65700DB19E3 /* CustomPaopaoView.xib */,
 				067C83DB1C2799AF0091A6A0 /* CustomPointAnnotation.h */,
 				067C83DC1C2799AF0091A6A0 /* CustomPointAnnotation.m */,
 				067C83D21C2796780091A6A0 /* CustomPintAnnotationView.h */,
@@ -368,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F4CDB71C250464008CAFE4 /* LaunchScreen.storyboard in Resources */,
+				06A6099E1C28E65700DB19E3 /* CustomPaopaoView.xib in Resources */,
 				06F4CE211C25300C008CAFE4 /* mapapi.bundle in Resources */,
 				06F4CDFB1C250C92008CAFE4 /* BaiduMapViewController.xib in Resources */,
 				06F4CDB41C250464008CAFE4 /* Assets.xcassets in Resources */,
@@ -405,6 +414,7 @@
 				06F4CDAC1C250463008CAFE4 /* AppDelegate.mm in Sources */,
 				068975571C2673A500D31344 /* BaiduMapModel.m in Sources */,
 				06F4CDA91C250463008CAFE4 /* main.m in Sources */,
+				06A6099C1C28E62000DB19E3 /* CustomPaopaoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,10 +10,11 @@
 #import "CustomPointAnnotation.h"
 #import "PaopaoViewClicked.h"
 #import "CustomPintAnnotationView.h"
+#import "CustomPaopaoView.h"
 
 @interface BaiduMapViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>
 
-@property (strong, nonatomic) IBOutlet UIView *customPaopaoView;
+
 @property (strong, nonatomic) IBOutlet BMKMapView *mapView;
 @property (nonatomic, strong) BMKLocationService *locService;
 @property (nonatomic, strong) BMKUserLocation *userLocation;
@@ -82,9 +83,8 @@
         CustomPintAnnotationView *customPintView = [CustomPintAnnotationView annotationViewWithMap:mapView];
         customPintView.annotation = annotation;
                 
-        self.customPaopaoView.frame = CGRectMake(0, 0, 185, 70);
-        self.customPaopaoView.layer.cornerRadius = 30;
-        BMKActionPaopaoView *paopaoView = [[BMKActionPaopaoView alloc]initWithCustomView:self.customPaopaoView];
+        CustomPaopaoView *customPaopaoView = [[CustomPaopaoView alloc]initWithFrame:CGRectMake(0, 0, 185, 70)];
+        BMKActionPaopaoView *paopaoView = [[BMKActionPaopaoView alloc]initWithCustomView:customPaopaoView];
         ((CustomPintAnnotationView *)customPintView).paopaoView = nil;
         ((CustomPintAnnotationView *)customPintView).paopaoView = paopaoView;
         return customPintView;
@@ -158,6 +158,8 @@
     [self.navigationController pushViewController:paopaoVC animated:YES];
     
 }
+
+
 
 
 
