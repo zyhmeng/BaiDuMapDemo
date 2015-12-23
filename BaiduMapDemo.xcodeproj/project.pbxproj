@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		067C83D41C2796780091A6A0 /* CustomPintAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C83D31C2796780091A6A0 /* CustomPintAnnotationView.m */; };
+		06540D7E1C2A7C6600B64063 /* EasyTableViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06540D7C1C2A7C6600B64063 /* EasyTableViewTool.m */; };
+		067C83D41C2796780091A6A0 /* CustomPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C83D31C2796780091A6A0 /* CustomPinAnnotationView.m */; };
 		067C83DD1C2799AF0091A6A0 /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 067C83DC1C2799AF0091A6A0 /* CustomPointAnnotation.m */; };
 		068975571C2673A500D31344 /* BaiduMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 068975561C2673A500D31344 /* BaiduMapModel.m */; };
 		0689755B1C2675C000D31344 /* PaopaoViewClicked.m in Sources */ = {isa = PBXBuildFile; fileRef = 068975591C2675C000D31344 /* PaopaoViewClicked.m */; };
 		0689755C1C2675C000D31344 /* PaopaoViewClicked.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0689755A1C2675C000D31344 /* PaopaoViewClicked.xib */; };
 		06A6099C1C28E62000DB19E3 /* CustomPaopaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A6099B1C28E62000DB19E3 /* CustomPaopaoView.m */; };
 		06A6099E1C28E65700DB19E3 /* CustomPaopaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A6099D1C28E65700DB19E3 /* CustomPaopaoView.xib */; };
+		06A609A11C28FF3000DB19E3 /* YFBaiduMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A609A01C28FF3000DB19E3 /* YFBaiduMap.m */; };
 		06F4CDA91C250463008CAFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDA81C250463008CAFE4 /* main.m */; };
 		06F4CDAC1C250463008CAFE4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDAB1C250463008CAFE4 /* AppDelegate.mm */; };
 		06F4CDAF1C250463008CAFE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDAE1C250463008CAFE4 /* ViewController.m */; };
@@ -61,8 +63,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		067C83D21C2796780091A6A0 /* CustomPintAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPintAnnotationView.h; sourceTree = "<group>"; };
-		067C83D31C2796780091A6A0 /* CustomPintAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPintAnnotationView.m; sourceTree = "<group>"; };
+		06540D7C1C2A7C6600B64063 /* EasyTableViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTableViewTool.m; sourceTree = "<group>"; };
+		06540D7D1C2A7C6600B64063 /* EasyTableViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTableViewTool.h; sourceTree = "<group>"; };
+		067C83D21C2796780091A6A0 /* CustomPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPinAnnotationView.h; sourceTree = "<group>"; };
+		067C83D31C2796780091A6A0 /* CustomPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPinAnnotationView.m; sourceTree = "<group>"; };
 		067C83DB1C2799AF0091A6A0 /* CustomPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
 		067C83DC1C2799AF0091A6A0 /* CustomPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
 		068975551C2673A500D31344 /* BaiduMapModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapModel.h; sourceTree = "<group>"; };
@@ -73,6 +77,9 @@
 		06A6099A1C28E62000DB19E3 /* CustomPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPaopaoView.h; sourceTree = "<group>"; };
 		06A6099B1C28E62000DB19E3 /* CustomPaopaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPaopaoView.m; sourceTree = "<group>"; };
 		06A6099D1C28E65700DB19E3 /* CustomPaopaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPaopaoView.xib; sourceTree = "<group>"; };
+		06A6099F1C28FF3000DB19E3 /* YFBaiduMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBaiduMap.h; sourceTree = "<group>"; };
+		06A609A01C28FF3000DB19E3 /* YFBaiduMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFBaiduMap.m; sourceTree = "<group>"; };
+		06A609A21C2900DC00DB19E3 /* YFBaiduMapConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFBaiduMapConfig.h; sourceTree = "<group>"; };
 		06F4CDA41C250463008CAFE4 /* BaiduMapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduMapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F4CDA81C250463008CAFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F4CDAA1C250463008CAFE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,6 +229,11 @@
 		06F4CDDA1C250A88008CAFE4 /* BaiduMap */ = {
 			isa = PBXGroup;
 			children = (
+				06540D7D1C2A7C6600B64063 /* EasyTableViewTool.h */,
+				06540D7C1C2A7C6600B64063 /* EasyTableViewTool.m */,
+				06A609A21C2900DC00DB19E3 /* YFBaiduMapConfig.h */,
+				06A6099F1C28FF3000DB19E3 /* YFBaiduMap.h */,
+				06A609A01C28FF3000DB19E3 /* YFBaiduMap.m */,
 				068975551C2673A500D31344 /* BaiduMapModel.h */,
 				068975561C2673A500D31344 /* BaiduMapModel.m */,
 				06F4CDF71C250C92008CAFE4 /* BaiduMapViewController.h */,
@@ -232,8 +244,8 @@
 				06A6099D1C28E65700DB19E3 /* CustomPaopaoView.xib */,
 				067C83DB1C2799AF0091A6A0 /* CustomPointAnnotation.h */,
 				067C83DC1C2799AF0091A6A0 /* CustomPointAnnotation.m */,
-				067C83D21C2796780091A6A0 /* CustomPintAnnotationView.h */,
-				067C83D31C2796780091A6A0 /* CustomPintAnnotationView.m */,
+				067C83D21C2796780091A6A0 /* CustomPinAnnotationView.h */,
+				067C83D31C2796780091A6A0 /* CustomPinAnnotationView.m */,
 				068975581C2675C000D31344 /* PaopaoViewClicked.h */,
 				068975591C2675C000D31344 /* PaopaoViewClicked.m */,
 				0689755A1C2675C000D31344 /* PaopaoViewClicked.xib */,
@@ -407,10 +419,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0689755B1C2675C000D31344 /* PaopaoViewClicked.m in Sources */,
-				067C83D41C2796780091A6A0 /* CustomPintAnnotationView.m in Sources */,
+				067C83D41C2796780091A6A0 /* CustomPinAnnotationView.m in Sources */,
 				067C83DD1C2799AF0091A6A0 /* CustomPointAnnotation.m in Sources */,
 				06F4CDAF1C250463008CAFE4 /* ViewController.m in Sources */,
 				06F4CDFA1C250C92008CAFE4 /* BaiduMapViewController.m in Sources */,
+				06540D7E1C2A7C6600B64063 /* EasyTableViewTool.m in Sources */,
+				06A609A11C28FF3000DB19E3 /* YFBaiduMap.m in Sources */,
 				06F4CDAC1C250463008CAFE4 /* AppDelegate.mm in Sources */,
 				068975571C2673A500D31344 /* BaiduMapModel.m in Sources */,
 				06F4CDA91C250463008CAFE4 /* main.m in Sources */,

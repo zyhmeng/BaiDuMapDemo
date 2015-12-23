@@ -1,5 +1,5 @@
 //
-//  CustomPintAnnotationView.h
+//  CustomPinAnnotationView.h
 //  BaiduMapDemo
 //
 //  Created by zyh on 15/12/21.
@@ -8,7 +8,7 @@
 
 
 
-@interface CustomPintAnnotationView : BMKPinAnnotationView
+@interface CustomPinAnnotationView : BMKPinAnnotationView
 /**
  *  快速创建方法
  *

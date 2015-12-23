@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YFBaiduMap.h"
 
 @interface ViewController : UIViewController
+
 
 
 @end

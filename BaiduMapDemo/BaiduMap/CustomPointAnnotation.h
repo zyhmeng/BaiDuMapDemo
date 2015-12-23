@@ -25,6 +25,6 @@
 /**
  *  图标
  */
-@property (nonatomic, copy) NSString *icon;
+@property (nonatomic, copy) UIImage *icon;
 
 @end

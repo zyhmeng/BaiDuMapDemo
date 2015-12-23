@@ -6,10 +6,10 @@
 //  Copyright © 2015年 zyh. All rights reserved.
 //
 
-#import "CustomPintAnnotationView.h"
+#import "CustomPinAnnotationView.h"
 #import "CustomPointAnnotation.h"
 
-@implementation CustomPintAnnotationView
+@implementation CustomPinAnnotationView
 
 - (instancetype)initWithAnnotation:(id<BMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -27,11 +27,11 @@
     static NSString *identifier = @"anno";
     
     // 1.从缓存池中取
-    CustomPintAnnotationView *annoView = (CustomPintAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    CustomPinAnnotationView *annoView = (CustomPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
     // 2.如果缓存池中没有, 创建一个新的
     if (annoView == nil) {
         
-        annoView = [[CustomPintAnnotationView alloc] initWithAnnotation:nil reuseIdentifier:identifier];
+        annoView = [[CustomPinAnnotationView alloc] initWithAnnotation:nil reuseIdentifier:identifier];
     }
     
     return annoView;
@@ -43,7 +43,7 @@
     [super setAnnotation:annotation];
     
     //     处理自己特有的操作
-    self.image = [UIImage imageNamed:annotation.icon];
+    self.image = annotation.icon;
     
 }
 

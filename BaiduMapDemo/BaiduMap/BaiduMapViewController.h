@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YFBaiduMap.h"
+#import "ViewController.h"
 
-//百度地图的密钥
-#define BaiduMapKey   @"i2RfVkOuRHrp2iGrUDi5mrFf"
 
-@interface BaiduMapViewController : UIViewController
+@interface BaiduMapViewController : UIViewController<BMKLocationServiceDelegate,YFBaiduMapDelegate>
+
+@property (strong, nonatomic) IBOutlet BMKMapView *mapView;
 
 @end
