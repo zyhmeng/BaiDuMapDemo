@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaopaoViewClicked">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaopaoViewDetail">
             <connections>
                 <outlet property="iconImage" destination="nBs-j1-ZiK" id="2z4-bQ-sk8"/>
                 <outlet property="latitudeLable" destination="Fgh-a3-fnn" id="KKg-Rt-5b4"/>

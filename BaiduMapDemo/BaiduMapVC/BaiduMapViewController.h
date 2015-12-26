@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YFBaiduMap.h"
+#import "YFBaiduMapTool.h"
 #import "ViewController.h"
 
 
-@interface BaiduMapViewController : UIViewController<BMKLocationServiceDelegate,YFBaiduMapDelegate>
+@interface BaiduMapViewController : UIViewController<BMKLocationServiceDelegate,YFBaiduMapToolDelegate>
 
 @property (strong, nonatomic) IBOutlet BMKMapView *mapView;
 

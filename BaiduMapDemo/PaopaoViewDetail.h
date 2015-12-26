@@ -1,5 +1,5 @@
 //
-//  PaopaoViewClicked.h
+//  PaopaoViewDetail.h
 //  BaiduMapDemo
 //
 //  Created by zyh on 15/12/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaopaoViewClicked : UIViewController
+@interface PaopaoViewDetail : UIViewController
 
 @property (nonatomic, assign) CGFloat locationLatitude;//纬度
 @property (nonatomic, assign) CGFloat locationLongitude;//经度

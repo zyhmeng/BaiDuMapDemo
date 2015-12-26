@@ -1,14 +1,14 @@
 //
-//  PaopaoViewClicked.m
+//  PaopaoViewDetail.m
 //  BaiduMapDemo
 //
 //  Created by zyh on 15/12/20.
 //  Copyright © 2015年 zyh. All rights reserved.
 //
 
-#import "PaopaoViewClicked.h"
+#import "PaopaoViewDetail.h"
 
-@interface PaopaoViewClicked ()
+@interface PaopaoViewDetail ()
 @property (strong, nonatomic) IBOutlet UILabel *latitudeLable;
 @property (strong, nonatomic) IBOutlet UIImageView *iconImage;
 @property (strong, nonatomic) IBOutlet UILabel *longitudeLable;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation PaopaoViewClicked
+@implementation PaopaoViewDetail
 
 - (void)viewDidLoad {
     [super viewDidLoad];

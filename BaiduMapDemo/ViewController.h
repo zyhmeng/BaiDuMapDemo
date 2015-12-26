@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YFBaiduMap.h"
+#import "YFBaiduMapTool.h"
 
 @interface ViewController : UIViewController
 

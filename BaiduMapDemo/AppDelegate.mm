@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BaiduMapViewController.h"
-
+#import "YFBaiduMaptoolConfig.h"
 
 @interface AppDelegate (){
     
