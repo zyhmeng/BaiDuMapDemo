@@ -66,12 +66,13 @@
     region.span.latitudeDelta = 0.08;
     region.span.longitudeDelta = 0.08;
     _mapView.region = region;
+
 }
 
 
 
 #pragma mark - 设置相关代理
--(void)viewWillAppear:(BOOL)animated
+-(void) viewWillAppear:(BOOL)animated
 {
     [_mapView viewWillAppear];
     
