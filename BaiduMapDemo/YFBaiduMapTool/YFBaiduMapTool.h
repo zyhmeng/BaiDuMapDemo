@@ -10,7 +10,7 @@
 
  3: self.mapView.delegate = self.yfBaiduMapTool;
  
- 4: [self.yfBaiduMapViewShowDataList addObjects..];
+ 4: self.yfBaiduMapViewShowDataList = 添加数据模型
  
  5: 调用YFBaiduMapToolDelegate代理方法customCalloutViewWithView返回自定义的UIView
  */

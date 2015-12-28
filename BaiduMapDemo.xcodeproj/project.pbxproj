@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06801C5B1C30C8A700621D43 /* CustomPaopaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06801C591C30C8A700621D43 /* CustomPaopaoView.m */; };
+		06801C5C1C30C8A700621D43 /* CustomPaopaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06801C5A1C30C8A700621D43 /* CustomPaopaoView.xib */; };
+		06801C601C30C8B800621D43 /* BaiduMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06801C5E1C30C8B800621D43 /* BaiduMapViewController.m */; };
+		06801C611C30C8B800621D43 /* BaiduMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06801C5F1C30C8B800621D43 /* BaiduMapViewController.xib */; };
 		068754FF1C2B97B800E3CA5E /* EasyTableViewTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 068754FE1C2B97B800E3CA5E /* EasyTableViewTool.m */; };
 		0687551A1C2BC9C500E3CA5E /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068755081C2BC9C500E3CA5E /* BaiduMapAPI_Base.framework */; };
 		0687551B1C2BC9C500E3CA5E /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068755091C2BC9C500E3CA5E /* BaiduMapAPI_Cloud.framework */; };
@@ -20,10 +24,6 @@
 		068755251C2BC9C500E3CA5E /* YFBaiduMapTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 068755181C2BC9C500E3CA5E /* YFBaiduMapTool.m */; };
 		0687552E1C2BCA4500E3CA5E /* PaopaoViewDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 0687552C1C2BCA4500E3CA5E /* PaopaoViewDetail.m */; };
 		0687552F1C2BCA4500E3CA5E /* PaopaoViewDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0687552D1C2BCA4500E3CA5E /* PaopaoViewDetail.xib */; };
-		068755331C2BCB1000E3CA5E /* BaiduMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068755311C2BCB1000E3CA5E /* BaiduMapViewController.m */; };
-		068755341C2BCB1000E3CA5E /* BaiduMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068755321C2BCB1000E3CA5E /* BaiduMapViewController.xib */; };
-		068755381C2BCB9000E3CA5E /* CustomPaopaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068755361C2BCB9000E3CA5E /* CustomPaopaoView.m */; };
-		068755391C2BCB9000E3CA5E /* CustomPaopaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068755371C2BCB9000E3CA5E /* CustomPaopaoView.xib */; };
 		06A000861C3024F60089180C /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A000851C3024F60089180C /* CustomPointAnnotation.m */; };
 		06F4CDA91C250463008CAFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDA81C250463008CAFE4 /* main.m */; };
 		06F4CDAC1C250463008CAFE4 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 06F4CDAB1C250463008CAFE4 /* AppDelegate.mm */; };
@@ -62,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06801C581C30C8A700621D43 /* CustomPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPaopaoView.h; sourceTree = "<group>"; };
+		06801C591C30C8A700621D43 /* CustomPaopaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPaopaoView.m; sourceTree = "<group>"; };
+		06801C5A1C30C8A700621D43 /* CustomPaopaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPaopaoView.xib; sourceTree = "<group>"; };
+		06801C5D1C30C8B800621D43 /* BaiduMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapViewController.h; sourceTree = "<group>"; };
+		06801C5E1C30C8B800621D43 /* BaiduMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapViewController.m; sourceTree = "<group>"; };
+		06801C5F1C30C8B800621D43 /* BaiduMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiduMapViewController.xib; sourceTree = "<group>"; };
 		068754FD1C2B97B800E3CA5E /* EasyTableViewTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTableViewTool.h; sourceTree = "<group>"; };
 		068754FE1C2B97B800E3CA5E /* EasyTableViewTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyTableViewTool.m; sourceTree = "<group>"; };
 		068755081C2BC9C500E3CA5E /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
@@ -80,12 +86,6 @@
 		0687552B1C2BCA4500E3CA5E /* PaopaoViewDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaopaoViewDetail.h; sourceTree = "<group>"; };
 		0687552C1C2BCA4500E3CA5E /* PaopaoViewDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaopaoViewDetail.m; sourceTree = "<group>"; };
 		0687552D1C2BCA4500E3CA5E /* PaopaoViewDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaopaoViewDetail.xib; sourceTree = "<group>"; };
-		068755301C2BCB1000E3CA5E /* BaiduMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaiduMapViewController.h; path = BaiduMapVC/BaiduMapViewController.h; sourceTree = "<group>"; };
-		068755311C2BCB1000E3CA5E /* BaiduMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaiduMapViewController.m; path = BaiduMapVC/BaiduMapViewController.m; sourceTree = "<group>"; };
-		068755321C2BCB1000E3CA5E /* BaiduMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BaiduMapViewController.xib; path = BaiduMapVC/BaiduMapViewController.xib; sourceTree = "<group>"; };
-		068755351C2BCB9000E3CA5E /* CustomPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPaopaoView.h; path = CustomPaopaoView/CustomPaopaoView.h; sourceTree = "<group>"; };
-		068755361C2BCB9000E3CA5E /* CustomPaopaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPaopaoView.m; path = CustomPaopaoView/CustomPaopaoView.m; sourceTree = "<group>"; };
-		068755371C2BCB9000E3CA5E /* CustomPaopaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomPaopaoView.xib; path = CustomPaopaoView/CustomPaopaoView.xib; sourceTree = "<group>"; };
 		06A000841C3024F60089180C /* CustomPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
 		06A000851C3024F60089180C /* CustomPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
 		06F4CDA41C250463008CAFE4 /* BaiduMapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiduMapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,12 +221,12 @@
 				068755061C2BC9C500E3CA5E /* YFBaiduMapTool */,
 				068754FD1C2B97B800E3CA5E /* EasyTableViewTool.h */,
 				068754FE1C2B97B800E3CA5E /* EasyTableViewTool.m */,
-				068755301C2BCB1000E3CA5E /* BaiduMapViewController.h */,
-				068755311C2BCB1000E3CA5E /* BaiduMapViewController.m */,
-				068755321C2BCB1000E3CA5E /* BaiduMapViewController.xib */,
-				068755351C2BCB9000E3CA5E /* CustomPaopaoView.h */,
-				068755361C2BCB9000E3CA5E /* CustomPaopaoView.m */,
-				068755371C2BCB9000E3CA5E /* CustomPaopaoView.xib */,
+				06801C5D1C30C8B800621D43 /* BaiduMapViewController.h */,
+				06801C5E1C30C8B800621D43 /* BaiduMapViewController.m */,
+				06801C5F1C30C8B800621D43 /* BaiduMapViewController.xib */,
+				06801C581C30C8A700621D43 /* CustomPaopaoView.h */,
+				06801C591C30C8A700621D43 /* CustomPaopaoView.m */,
+				06801C5A1C30C8A700621D43 /* CustomPaopaoView.xib */,
 				0687552B1C2BCA4500E3CA5E /* PaopaoViewDetail.h */,
 				0687552C1C2BCA4500E3CA5E /* PaopaoViewDetail.m */,
 				0687552D1C2BCA4500E3CA5E /* PaopaoViewDetail.xib */,
@@ -391,12 +391,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F4CDB71C250464008CAFE4 /* LaunchScreen.storyboard in Resources */,
-				068755391C2BCB9000E3CA5E /* CustomPaopaoView.xib in Resources */,
+				06801C611C30C8B800621D43 /* BaiduMapViewController.xib in Resources */,
 				06F4CDB41C250464008CAFE4 /* Assets.xcassets in Resources */,
+				06801C5C1C30C8A700621D43 /* CustomPaopaoView.xib in Resources */,
 				0687552F1C2BCA4500E3CA5E /* PaopaoViewDetail.xib in Resources */,
 				068755211C2BC9C500E3CA5E /* mapapi.bundle in Resources */,
 				06F4CDB21C250464008CAFE4 /* Main.storyboard in Resources */,
-				068755341C2BCB1000E3CA5E /* BaiduMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +423,10 @@
 			files = (
 				068755251C2BC9C500E3CA5E /* YFBaiduMapTool.m in Sources */,
 				06F4CDAF1C250463008CAFE4 /* ViewController.m in Sources */,
-				068755331C2BCB1000E3CA5E /* BaiduMapViewController.m in Sources */,
 				068754FF1C2B97B800E3CA5E /* EasyTableViewTool.m in Sources */,
-				068755381C2BCB9000E3CA5E /* CustomPaopaoView.m in Sources */,
+				06801C601C30C8B800621D43 /* BaiduMapViewController.m in Sources */,
 				068755221C2BC9C500E3CA5E /* YFBaiduMapModel.m in Sources */,
+				06801C5B1C30C8A700621D43 /* CustomPaopaoView.m in Sources */,
 				0687552E1C2BCA4500E3CA5E /* PaopaoViewDetail.m in Sources */,
 				06F4CDAC1C250463008CAFE4 /* AppDelegate.mm in Sources */,
 				06A000861C3024F60089180C /* CustomPointAnnotation.m in Sources */,
