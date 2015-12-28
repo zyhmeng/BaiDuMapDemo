@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiduMapViewController">
+            <connections>
+                <outlet property="mapView" destination="ezE-Gh-Vnr" id="Ng3-H2-fLn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezE-Gh-Vnr" customClass="BMKMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axd-R2-fxS">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-qv-mF2">
+                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="ndu-iR-1mM"/>
+                                    </constraints>
+                                    <state key="normal" title="我的位置">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ndu-iR-1mM"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="ndu-iR-1mM"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="myLocation:" destination="-1" eventType="touchUpInside" id="mr7-zz-1IG"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.89000000000000001" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Li7-qv-mF2" secondAttribute="bottom" constant="7" id="ORt-e8-ELy"/>
+                                <constraint firstAttribute="height" constant="44" id="ZnO-Jz-zxH"/>
+                                <constraint firstItem="Li7-qv-mF2" firstAttribute="leading" secondItem="Axd-R2-fxS" secondAttribute="leading" constant="60" id="b2B-JK-aRy"/>
+                                <constraint firstItem="Li7-qv-mF2" firstAttribute="top" secondItem="Axd-R2-fxS" secondAttribute="top" constant="7" id="pyW-6j-SKJ"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="Li7-qv-mF2"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="ZnO-Jz-zxH"/>
+                                    <exclude reference="ORt-e8-ELy"/>
+                                    <exclude reference="b2B-JK-aRy"/>
+                                    <exclude reference="pyW-6j-SKJ"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="Li7-qv-mF2"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="ZnO-Jz-zxH"/>
+                                    <include reference="ORt-e8-ELy"/>
+                                    <include reference="b2B-JK-aRy"/>
+                                    <include reference="pyW-6j-SKJ"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Axd-R2-fxS" secondAttribute="bottom" constant="10" id="MGT-LP-44y"/>
+                        <constraint firstItem="Axd-R2-fxS" firstAttribute="leading" secondItem="ezE-Gh-Vnr" secondAttribute="leading" id="MUb-vN-Q8o"/>
+                        <constraint firstAttribute="bottom" secondItem="Axd-R2-fxS" secondAttribute="bottom" id="o7s-r1-rct"/>
+                        <constraint firstAttribute="trailing" secondItem="Axd-R2-fxS" secondAttribute="trailing" id="sQf-Xu-AQY"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="Axd-R2-fxS"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="MGT-LP-44y"/>
+                            <exclude reference="MUb-vN-Q8o"/>
+                            <exclude reference="o7s-r1-rct"/>
+                            <exclude reference="sQf-Xu-AQY"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="Axd-R2-fxS"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="MGT-LP-44y"/>
+                            <include reference="MUb-vN-Q8o"/>
+                            <exclude reference="o7s-r1-rct"/>
+                            <include reference="sQf-Xu-AQY"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ezE-Gh-Vnr" secondAttribute="bottom" id="ANy-GB-4iN"/>
+                <constraint firstItem="ezE-Gh-Vnr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="U0d-On-Xpm"/>
+                <constraint firstAttribute="trailing" secondItem="ezE-Gh-Vnr" secondAttribute="trailing" id="XY5-y9-ZJW"/>
+                <constraint firstItem="ezE-Gh-Vnr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f7M-x9-Noz"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="ezE-Gh-Vnr"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="ANy-GB-4iN"/>
+                    <exclude reference="U0d-On-Xpm"/>
+                    <exclude reference="XY5-y9-ZJW"/>
+                    <exclude reference="f7M-x9-Noz"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="ezE-Gh-Vnr"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="ANy-GB-4iN"/>
+                    <include reference="U0d-On-Xpm"/>
+                    <include reference="XY5-y9-ZJW"/>
+                    <include reference="f7M-x9-Noz"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
