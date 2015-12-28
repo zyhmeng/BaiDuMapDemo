@@ -15,18 +15,31 @@
  5: 调用YFBaiduMapToolDelegate代理方法customCalloutViewWithView返回自定义的UIView
  */
 #import <Foundation/Foundation.h>
-#import "YFBaiduMapModel.h"
+#import "CustomPointAnnotation.h"
+
+
 @protocol YFBaiduMapToolDelegate <NSObject>
 @optional
 
 /**
+ *  显示大头针的位置
+ *
+ *  @param object 需要显示大头针位置的数据模型
+ *
+ *  @return 要显示大头针的位置
+ */
+- (CLLocationCoordinate2D)yfBaiduMapShowPointWith:(id)object;
+
+/**
  *  自定义的calloutView
  *
- *  @param object  自定义calloutView的数据模型
+ *  @param object         自定义calloutView的数据模型
+ *  @param annotationView 注意：在这里设置自定义的大头针的图片
  *
  *  @return 自定义的calloutView
  */
-- (UIView *)yfBaiDuMapCustomCalloutViewWith:(id)object;
+- (UIView *)yfBaiDuMapCustomCalloutViewWith:(id)object andAnnotationView:(BMKAnnotationView *)annotationView;
+
 /**
  *  选中地图大头针的callout调用此方法
  *
@@ -34,14 +47,8 @@
  */
 - (void)yfBaiduMapSelectedCalloutView:(id)object;
 
-/**
- *  显示大头针的位置
- *
- *  @param object 显示大头针的其他情况传入(相当于其他情况的扩展)
- *
- *  @return 要显示大头针的数据源
- */
-- (NSMutableArray *)yfBaiduMapShowPinAnnotationWith:(id)object;
+
+
 @end
 
 
@@ -53,7 +60,8 @@
  */
 @property (nonatomic, strong) NSMutableArray *yfBaiduMapViewShowDataList;
 
-@property (nonatomic, strong)YFBaiduMapModel *baiduMapModel;
+
+@property (nonatomic, assign) NSIndexPath *index;
 @end
 
 

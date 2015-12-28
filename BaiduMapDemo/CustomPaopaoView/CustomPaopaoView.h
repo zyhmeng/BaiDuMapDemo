@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomPaopaoView : UIView
+@property (strong, nonatomic) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UILabel *subtitle;
 
 @end

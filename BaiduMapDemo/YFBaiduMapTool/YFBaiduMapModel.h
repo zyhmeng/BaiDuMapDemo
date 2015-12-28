@@ -23,7 +23,5 @@
 @property (nonatomic, strong) NSString *subtitle;
 
 
--(YFBaiduMapModel *)configMapModel:(NSDictionary *)dict;
 
-- (instancetype)initWithConfigMapModel:(NSDictionary *)dict;
 @end

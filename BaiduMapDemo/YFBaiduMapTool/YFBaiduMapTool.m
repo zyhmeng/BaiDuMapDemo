@@ -8,8 +8,8 @@
 
 #import "YFBaiduMapTool.h"
 #import "BaiduMapViewController.h"
-#import "CustomPinAnnotationView.h"
 #import "CustomPointAnnotation.h"
+
 
 @implementation YFBaiduMapTool
 
@@ -22,47 +22,54 @@
     return self;
 }
 #pragma mark - BMKMapViewDelegate
-//根据anntation生成对应的View
+#pragma mark 根据anntation生成对应的View
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
 {
-    if ([annotation isKindOfClass:[CustomPointAnnotation class]]) {
-        static NSString *pinAnnotation = @"pinAnnotation";
-        CustomPinAnnotationView *pinAnnotationView = (CustomPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinAnnotation];
-        if (pinAnnotationView == nil) {
-            pinAnnotationView = [[CustomPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:pinAnnotation];
-        }
-        pinAnnotationView.annotation = annotation;
-        id object;
-        UIView *calloutView = [self.yfBaiduMapToolDelegate yfBaiDuMapCustomCalloutViewWith:object];
-        BMKActionPaopaoView *paopaoView = [[BMKActionPaopaoView alloc]initWithCustomView:calloutView];
-        ((CustomPinAnnotationView *)pinAnnotationView).paopaoView = nil;
-        ((CustomPinAnnotationView *)pinAnnotationView).paopaoView = paopaoView;
-        
-        return pinAnnotationView;
+    
+    static NSString *pinAnnotation = @"pinAnnotation";
+    BMKPinAnnotationView *pinAnnotationView = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pinAnnotation];
+    if (pinAnnotationView == nil) {
+        pinAnnotationView = [[BMKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:pinAnnotation];
     }
-    return nil;
+    CustomPointAnnotation *pointAnnotation = (CustomPointAnnotation *)annotation;
+        
+    UIView *calloutView = [self.yfBaiduMapToolDelegate yfBaiDuMapCustomCalloutViewWith:[self.yfBaiduMapViewShowDataList objectAtIndex:pointAnnotation.indexPath.row] andAnnotationView:pinAnnotationView];
+    NSInteger row = pointAnnotation.indexPath.row;
+    self.index = [NSIndexPath indexPathForRow:row inSection:0];
+
+    BMKActionPaopaoView *paopaoView = [[BMKActionPaopaoView alloc]initWithCustomView:calloutView];
+    ((BMKPinAnnotationView *)pinAnnotationView).paopaoView = nil;
+    ((BMKPinAnnotationView *)pinAnnotationView).paopaoView = paopaoView;
+    
+    return pinAnnotationView;
+    
 }
 
-//当点击annotation view弹出的泡泡时，调用此接口
+#pragma mark 当点击annotation view弹出的泡泡时，调用此接口
 - (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view
 {
-//    id object = [self.yfBaiduMapShowDataList objectAtIndex:];
-    id object;
-    [self.yfBaiduMapToolDelegate yfBaiduMapSelectedCalloutView:object];
+    
+    [self.yfBaiduMapToolDelegate yfBaiduMapSelectedCalloutView:[self.yfBaiduMapViewShowDataList objectAtIndex:self.index.row]];
+    
 }
-//显示大头针位置和图片时调用这个接口
+
+#pragma mark 地图初始化完毕时会调用此接口,在这里我们显示大头针的位置
 - (void)mapViewDidFinishLoading:(BMKMapView *)mapView
 {
-    self.yfBaiduMapViewShowDataList = [self.yfBaiduMapToolDelegate yfBaiduMapShowPinAnnotationWith:nil];
-    for (NSDictionary *dict in self.yfBaiduMapViewShowDataList) {
-        self.baiduMapModel = [[YFBaiduMapModel alloc]initWithConfigMapModel:dict];
-        CustomPointAnnotation *customPoint = [[CustomPointAnnotation alloc]init];
-        CLLocationCoordinate2D coordinate2;
-        coordinate2.latitude = [self.baiduMapModel.latitude floatValue];
-        coordinate2.longitude = [self.baiduMapModel.longitude floatValue];
-        customPoint.coordinate = coordinate2;
-        customPoint.icon = [UIImage imageNamed:self.baiduMapModel.icon];
-        [mapView addAnnotation:customPoint];
+    if (self.yfBaiduMapViewShowDataList != 0&&self.yfBaiduMapViewShowDataList.count>0) {
+        
+        for (int i = 0; i < self.yfBaiduMapViewShowDataList.count; i++) {
+            
+            CLLocationCoordinate2D coordinate = [self.yfBaiduMapToolDelegate yfBaiduMapShowPointWith:[self.yfBaiduMapViewShowDataList objectAtIndex:i]];
+            
+            CustomPointAnnotation *customPoint = [[CustomPointAnnotation alloc]init];
+            ;
+            customPoint.coordinate = coordinate;
+            customPoint.indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            
+            [mapView addAnnotation:customPoint];
+        }
+        
     }
 }
 @end

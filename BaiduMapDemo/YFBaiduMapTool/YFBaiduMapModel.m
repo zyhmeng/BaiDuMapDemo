@@ -10,15 +10,5 @@
 
 @implementation YFBaiduMapModel
 
-- (YFBaiduMapModel *)configMapModel:(NSDictionary *)dict
-{
-    [self setValuesForKeysWithDictionary:dict];
-    return self;
-}
 
-- (instancetype)initWithConfigMapModel:(NSDictionary *)dict;
-{
-    [self setValuesForKeysWithDictionary:dict];
-    return self;
-}
 @end

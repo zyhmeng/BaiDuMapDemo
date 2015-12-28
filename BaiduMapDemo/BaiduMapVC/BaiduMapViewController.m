@@ -82,9 +82,16 @@
     NSDictionary *dict = @{@"latitude":@"34.782879",@"longitude":@"113.726475",@"icon":@"start",@"locationIcon":@"man",@"title":@"云峰",@"subtitle":@"绿地峰会天下"};
     
     NSDictionary *dict1 = @{@"latitude":@"34.780000",@"longitude":@"113.706400",@"icon":@"man",@"locationIcon":@"man",@"title":@"地图位置",@"subtitle":@"显示位置"};
+    NSMutableArray *mutableArray = [[NSMutableArray alloc]init];
+    [mutableArray addObject:dict];
+    [mutableArray addObject:dict1];
     
-    [self.yfBaiduMapTool.yfBaiduMapViewShowDataList addObject:dict];
-    [self.yfBaiduMapTool.yfBaiduMapViewShowDataList addObject:dict1];
+    
+    for (NSDictionary *dict in mutableArray) {
+        YFBaiduMapModel *mapModel = [[YFBaiduMapModel alloc]init];
+        [mapModel setValuesForKeysWithDictionary:dict];
+        [self.yfBaiduMapTool.yfBaiduMapViewShowDataList addObject:mapModel];
+    }
 
     
 }
@@ -117,28 +124,34 @@
 
 #pragma mark - YFBaiduMapToolDelegate
 #pragma mark 创建CustomCalloutView并返回
-- (UIView *)yfBaiDuMapCustomCalloutViewWith:(id)object
+- (UIView *)yfBaiDuMapCustomCalloutViewWith:(id)object andAnnotationView:(BMKAnnotationView *)annotationView
 {
-    CustomPaopaoView *paopaoView = [[CustomPaopaoView alloc]initWithFrame:CGRectMake(0, 0, 185, 70)];
+    YFBaiduMapModel *mapModel = object;
     
+    CustomPaopaoView *paopaoView = [[CustomPaopaoView alloc]initWithFrame:CGRectMake(0, 0, 185, 70)];
+    paopaoView.title.text = mapModel.title;
+    paopaoView.subtitle.text = mapModel.subtitle;
+    annotationView.image = [UIImage imageNamed:mapModel.icon];
     return paopaoView;
+    
 }
 
 #pragma mark  这里设置大头针的位置
--(NSMutableArray *)yfBaiduMapShowPinAnnotationWith:(id)object
+- (CLLocationCoordinate2D)yfBaiduMapShowPointWith:(id)object
 {
-    return self.yfBaiduMapTool.yfBaiduMapViewShowDataList;
+    YFBaiduMapModel *mapModel = object;
+        
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([mapModel.latitude doubleValue], [mapModel.longitude doubleValue]);
+    return coordinate;
 }
-
 #pragma mark  点击paopaoView响应事件
 - (void)yfBaiduMapSelectedCalloutView:(id)object
 {
+    YFBaiduMapModel *mapModel = object;
     PaopaoViewDetail *paopaoVC = [[PaopaoViewDetail alloc]init];
-    paopaoVC.locationTitle;
-    paopaoVC.locationSubtitle;
     
-    
-    
+    paopaoVC.locationTitle = mapModel.title;
+    paopaoVC.locationSubtitle = mapModel.subtitle;
     paopaoVC.locationLatitude = self.userLocation.location.coordinate.latitude;
     paopaoVC.locationLongitude = self.userLocation.location.coordinate.longitude;
     
